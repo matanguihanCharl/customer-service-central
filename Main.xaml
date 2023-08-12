@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1048,1106" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1048,2276" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -91,40 +91,40 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="689,1041" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="689,2211" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:TriggerScope DisplayName="Trigger Scope" sap:VirtualizedContainerService.HintSize="627,930" sap2010:WorkflowViewState.IdRef="TriggerScope_1" SchedulingMode="Concurrent">
+    <ui:TriggerScope DisplayName="Trigger Scope" sap:VirtualizedContainerService.HintSize="627,2100" sap2010:WorkflowViewState.IdRef="TriggerScope_1" SchedulingMode="Concurrent">
       <ui:TriggerScope.Action>
         <ActivityAction x:TypeArguments="ui:EventInfoTriggerArgs">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:EventInfoTriggerArgs" Name="args" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do when a call status change" sap:VirtualizedContainerService.HintSize="575,317" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do when a call status change" sap:VirtualizedContainerService.HintSize="575,1412" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[args.TriggerName]" sap:VirtualizedContainerService.HintSize="513,206" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[args.TriggerName]" sap:VirtualizedContainerService.HintSize="513,1301" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence x:Key="Element Attribute Change Trigger - Incoming Call" DisplayName="Sequence - Incoming Call" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence x:Key="Element Attribute Change Trigger - Incoming Call" DisplayName="Sequence - Incoming Call" sap:VirtualizedContainerService.HintSize="496,285" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="Assign Innertext Value" sap:VirtualizedContainerService.HintSize="512,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign DisplayName="Assign Innertext Value" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[InnerTextValue]</OutArgument>
                   </Assign.To>
@@ -132,24 +132,21 @@
                     <InArgument x:TypeArguments="x:String">[args.EventInfo.AttributeEventInfo.Value.ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <If Condition="[InnerTextValue &lt;&gt; &quot;No incoming calls.&quot;]" DisplayName="If change does not equal to &quot;No incoming calls.&quot;" sap:VirtualizedContainerService.HintSize="512,805" sap2010:WorkflowViewState.IdRef="If_1">
+                <If Condition="[InnerTextValue &lt;&gt; &quot;No incoming calls.&quot;]" DisplayName="If change does not equal to &quot;No incoming calls.&quot;" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="478,623" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="PhoneNumber" />
-                      </Sequence.Variables>
+                    <Sequence sap:VirtualizedContainerService.HintSize="476,443" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign - Phone Number" sap:VirtualizedContainerService.HintSize="436,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign DisplayName="Assign - Phone Number" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[PhoneNumber]</OutArgument>
                         </Assign.To>
@@ -157,7 +154,7 @@
                           <InArgument x:TypeArguments="x:String">[InnerTextValue]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:LogMessage DisplayName="Log Message - Log Phone Number" sap:VirtualizedContainerService.HintSize="436,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Calling: &quot; + PhoneNumber]">
+                      <ui:LogMessage DisplayName="Log Message - Log Phone Number" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Calling: &quot; + PhoneNumber]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -165,7 +162,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
-                      <ui:UseForegroundScope WaitForeground="{x:Null}" DisplayName="Use Foreground to add caller data in app" sap:VirtualizedContainerService.HintSize="436,232" sap2010:WorkflowViewState.IdRef="UseForegroundScope_1">
+                      <ui:UseForegroundScope WaitForeground="{x:Null}" DisplayName="Use Foreground to add caller data in app" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="UseForegroundScope_1">
                         <ui:UseForegroundScope.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AddCallerData.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AddCallerData.xaml">
@@ -179,7 +176,7 @@
                         </ui:UseForegroundScope.Body>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -248,20 +245,65 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <Assign DisplayName="Assign Rewards" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:Boolean">[Rewards]</OutArgument>
+                    <OutArgument x:TypeArguments="x:Boolean">[RewardsProgram]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
                     <InArgument x:TypeArguments="x:Boolean">[CBool(args.EventInfo.AttributeEventInfo.Value)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:LogMessage DisplayName="Log Message - Rewards" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Rewards set to: &quot; + Rewards.ToString]" />
+                <ui:LogMessage DisplayName="Log Message - Rewards" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Rewards set to: &quot; + RewardsProgram.ToString]" />
               </Sequence>
+              <If x:Key="Click Trigger - Hang up" Condition="[MonthlyNewsletter or DiscountCard or RewardsProgram]" DisplayName="If any upsell opportunities checked" sap:VirtualizedContainerService.HintSize="410,1027" sap2010:WorkflowViewState.IdRef="If_2">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,616" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="NewServiceResults" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message - EnabledNewServices launched" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Launching EnableNewServices...&quot;]" />
+                    <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process - EnableNewServices" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="EnableNewServices">
+                      <ui:InvokeProcess.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_PhoneNumber">
+                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="PhoneNumber" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:Boolean" x:Key="in_MonthlyNewsletter">
+                          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="MonthlyNewsletter" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:Boolean" x:Key="in_DiscountCard">
+                          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="DiscountCard" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:Boolean" x:Key="in_RewardsProgram">
+                          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="RewardsProgram" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="out_Results">
+                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="NewServiceResults" />
+                        </InArgument>
+                      </ui:InvokeProcess.Arguments>
+                    </ui:InvokeProcess>
+                    <ui:LogMessage DisplayName="Log Message - Results " sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[NewServiceResults +&quot;- Services added succesfully.&quot;]" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message - EnabledNewServices not launched" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;EnableNewServices not launched&quot;]" />
+                  </Sequence>
+                </If.Else>
+              </If>
             </Switch>
           </Sequence>
         </ActivityAction>
       </ui:TriggerScope.Action>
       <ui:TriggerScope.Triggers>
-        <scg:List x:TypeArguments="Activity" Capacity="4">
+        <scg:List x:TypeArguments="Activity" Capacity="8">
           <ui:ElementAttributeChangeTrigger AttributeName="innerText" DisplayName="Element Attribute Change Trigger - Incoming Call" sap:VirtualizedContainerService.HintSize="591,160" sap2010:WorkflowViewState.IdRef="ElementAttributeChangeTrigger_1" InformativeScreenshot="6d62edfcdfc78c1da23a9e8db11a0f33" Selector="&lt;html app='msedge.exe' title='ACME System *' /&gt;&lt;webctrl id='phoneNumber' tag='DIV' /&gt;" />
           <ui:ElementAttributeChangeTrigger AttributeName="checked" DisplayName="Element Attribute Change Trigger - Monthly Newsletter" sap:VirtualizedContainerService.HintSize="591,52" sap2010:WorkflowViewState.IdRef="ElementAttributeChangeTrigger_2" InformativeScreenshot="dff4e861df5ad6ec41d703ee5c1f3916" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Add Account' /&gt;&lt;webctrl id='newsletter' tag='INPUT' type='checkbox' /&gt;">
             <sap:WorkflowViewStateService.ViewState>
@@ -287,13 +329,22 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ElementAttributeChangeTrigger>
+          <ui:ClickTriggerV2 ClippingRegion="{x:Null}" BlockEvent="False" DisplayName="Click Trigger - Hang up" sap:VirtualizedContainerService.HintSize="591,52" sap2010:WorkflowViewState.IdRef="ClickTriggerV2_1" IncludeChildren="True" InformativeScreenshot="09e7ac6affaace9df22d94c08387a532" KeyModifiers="None" MouseButton="BTN_LEFT" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Add Account' /&gt;&lt;webctrl id='hang-upl-button' tag='BUTTON' /&gt;" TriggerMode="TriggerDown">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ClickTriggerV2>
         </scg:List>
       </ui:TriggerScope.Triggers>
       <ui:TriggerScope.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="MonthlyNewsletter" />
         <Variable x:TypeArguments="x:String" Name="InnerTextValue" />
         <Variable x:TypeArguments="x:Boolean" Name="DiscountCard" />
-        <Variable x:TypeArguments="x:Boolean" Name="Rewards" />
+        <Variable x:TypeArguments="x:Boolean" Name="RewardsProgram" />
+        <Variable x:TypeArguments="x:String" Name="PhoneNumber" />
       </ui:TriggerScope.Variables>
     </ui:TriggerScope>
   </Sequence>
